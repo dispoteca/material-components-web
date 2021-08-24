@@ -479,7 +479,7 @@
 @mixin with-touch-target($query: feature-targeting-functions.all()) {
   $feat-structure: feature-targeting-functions.create-target($query, structure);
   $touch-target-margin:
-    (touch-target-variables.$height - button-variables.$height) / 2;
+    (touch-target-variables.$height - button-variables.$height) * 0.5;
   $vertical-padding: math.max(0, variables.$actions-padding - $touch-target-margin);
 
   // Buttons with an increased touch target have added vertical margin, so

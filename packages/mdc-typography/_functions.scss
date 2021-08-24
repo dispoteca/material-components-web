@@ -21,6 +21,7 @@
 //
 
 @use "sass:map";
+@use "sass:math";
 @use "sass:string";
 
 @function set-styles_($base-styles, $scale-styles, $override-styles) {
@@ -40,5 +41,5 @@
 }
 
 @function get-letter-spacing_($tracking, $font-size) {
-  @return $tracking / ($font-size * 16) * 1em;
+  @return math.div($tracking, $font-size * 16) * 1em;
 }

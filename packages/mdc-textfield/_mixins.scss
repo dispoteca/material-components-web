@@ -1302,7 +1302,7 @@
       align-self: auto;
       box-sizing: border-box;
       height: auto;
-      margin: $padding-inset / 2 1px 1px 0;
+      margin: $padding-inset * 0.5 1px 1px 0;
       padding: 0 $padding-inset $padding-inset;
     }
 

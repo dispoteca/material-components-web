@@ -250,7 +250,7 @@ $ripple-target: ".mdc-checkbox__ripple";
 
 @mixin ripple-size($ripple-size, $query: feature-targeting-functions.all()) {
   $feat-structure: feature-targeting-functions.create-target($query, structure);
-  $checkbox-padding: ($ripple-size - variables.$icon-size) / 2;
+  $checkbox-padding: ($ripple-size - variables.$icon-size) * 0.5;
 
   @include feature-targeting-mixins.targets($feat-structure) {
     padding: $checkbox-padding;
@@ -423,7 +423,7 @@ $ripple-target: ".mdc-checkbox__ripple";
   $ripple-size: variables.$ripple-size,
   $query: feature-targeting-functions.all()) {
   $feat-structure: feature-targeting-functions.create-target($query, structure);
-  $offset: ($ripple-size - $size) / 2;
+  $offset: ($ripple-size - $size) * 0.5;
 
   @include feature-targeting-mixins.targets($feat-structure) {
     .mdc-checkbox__native-control {
@@ -843,7 +843,7 @@ $ripple-target: ".mdc-checkbox__ripple";
     width: 100%;
     height: 0;
     transform: scaleX(0) rotate(0deg);
-    border-width: math.floor(variables.$mark-stroke-size) / 2;
+    border-width: math.floor(variables.$mark-stroke-size) * 0.5;
     border-style: solid;
     opacity: 0;
   }

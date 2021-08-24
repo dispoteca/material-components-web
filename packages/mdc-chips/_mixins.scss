@@ -510,12 +510,12 @@ $ripple-target: ".mdc-chip__ripple";
   $feat-structure: feature-targeting-functions.create-target($query, structure);
 
   @include feature-targeting-mixins.targets($feat-structure) {
-    padding: $gap-size / 2;
+    padding: $gap-size * 0.5;
   }
 
   .mdc-chip {
     @include feature-targeting-mixins.targets($feat-structure) {
-      margin: $gap-size / 2;
+      margin: $gap-size * 0.5;
     }
   }
 

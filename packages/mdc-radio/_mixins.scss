@@ -346,7 +346,7 @@ $ripple-target: ".mdc-radio__ripple";
   $ripple-size: variables.$ripple-size,
   $query: feature-targeting-functions.all()) {
   $feat-structure: feature-targeting-functions.create-target($query, structure);
-  $offset: ($ripple-size - $size) / 2;
+  $offset: ($ripple-size - $size) * 0.5;
 
   .mdc-radio__native-control {
     @include feature-targeting-mixins.targets($feat-structure) {
@@ -388,7 +388,7 @@ $ripple-target: ".mdc-radio__ripple";
 ///
 @mixin ripple-size($size, $query: feature-targeting-functions.all()) {
   $feat-structure: feature-targeting-functions.create-target($query, structure);
-  $padding: ($size - variables.$icon-size) / 2;
+  $padding: ($size - variables.$icon-size) * 0.5;
 
   @include feature-targeting-mixins.targets($feat-structure) {
     padding: $padding;

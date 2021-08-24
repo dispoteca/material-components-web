@@ -33,7 +33,7 @@
 ///     wrap label in a child element to apply `transitionY(-50%)` to automatically offset based on box height.
 ///
 @function get-outlined-label-position-y($text-field-height) {
-  @return $text-field-height / 2 + notched-outline-variables.$label-box-height / 2;
+  @return $text-field-height * 0.5 + notched-outline-variables.$label-box-height * 0.5;
 }
 
 $error: error !default;

@@ -219,7 +219,7 @@
   // Position for the tap target that contains the thumb to align the thumb
   // correctly offset from the track.
   $tap-target-initial-position:
-    -$ripple-size / 2 + variables.$thumb-diameter / 2 - variables.$thumb-offset;
+    -$ripple-size * 0.5 + variables.$thumb-diameter * 0.5 - variables.$thumb-offset;
   // Value to cover the whole switch area (including the ripple) with the
   // native control.
   $native-control-width:
@@ -231,7 +231,7 @@
       @include rtl-mixins.reflexive-position(left, $tap-target-initial-position);
 
       // Ensures the knob is centered on the track.
-      top: -(($ripple-size - variables.$track-height) / 2);
+      top: -(($ripple-size - variables.$track-height) * 0.5);
       width: $ripple-size;
       height: $ripple-size;
     }
@@ -279,7 +279,7 @@
     width: variables.$track-width;
     height: variables.$track-height;
     border: 1px solid;
-    border-radius: variables.$track-height / 2;
+    border-radius: variables.$track-height * 0.5;
     opacity: .38;
   }
 
@@ -337,7 +337,7 @@
     box-sizing: border-box;
     width: variables.$thumb-diameter;
     height: variables.$thumb-diameter;
-    border: variables.$thumb-diameter / 2 solid;
+    border: variables.$thumb-diameter * 0.5 solid;
     border-radius: 50%;
     // Allow events to go through to the native control, necessary for IE and Edge.
     pointer-events: none;
